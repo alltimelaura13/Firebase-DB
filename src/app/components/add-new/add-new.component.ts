@@ -18,7 +18,8 @@ export class AddNewComponent implements OnInit {
 
   ngOnInit() {
   }
-
+// creamso la DB y añadimos al array de 'users'
+// el nombre y el apellido que hemos obtenido de los inputs
   add(user, userLast) {
     console.log('si');
     firebase.database().ref('users/').push({

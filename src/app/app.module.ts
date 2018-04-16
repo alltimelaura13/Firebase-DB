@@ -20,12 +20,12 @@ import * as firebase from 'firebase/app';
 // pero se mantiene aquí por motivos de facilidad lectora.
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyCXmbIqHNnPczedMvF1opqlmAPoCDpQUiw',
-  authDomain: 'userlist-3b.firebaseapp.com',
-  databaseURL: 'https://userlist-3b.firebaseio.com',
-  projectId: 'userlist-3b',
-  storageBucket: 'userlist-3b.appspot.com',
-  messagingSenderId: '649269537068'
+  apiKey: 'AIzaSyChstIBHuuzT5OIECskyD7MA9z-srgG4FM',
+  authDomain: 'my-project-1517044609578.firebaseapp.com',
+  databaseURL: 'https://my-project-1517044609578.firebaseio.com',
+  projectId: 'my-project-1517044609578',
+  storageBucket: '',
+  messagingSenderId: '309227040445'
 };
 
 firebase.initializeApp(firebaseConfig);
