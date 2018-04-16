@@ -1,22 +1,19 @@
-<p>
-  list works!
-</p>
 
 
-<!-- BOton sencillo con una funcion de añadir, que puedes ver en list.component.ts
-tendrás que añadir un input y tal para poder poner nombre -->
-<input type="text" #user id="userInput" placeholder="User Name">
-<input type="text" #userLast id="userLast" placeholder="User Last Name">
-<button (click)="add(user.value, userLast.value)"> Añadir algo </button>
 
-  <ul style ="height: 50px; background-color:antiquewhite">
-    <li *ngFor="let user of users">
-      Name: {{ user.Name | json }}
-      Last Name: {{ user.Surname | json }}
-    </li>
+<h3 class="title">Listado de usuarios</h3>
+<button class="addBtn" (click)='goToAdd()'>Añadir Usuario</button>
 
+
+<!-- bucle para recorrer los usuarios -->
+
+  <ul class="conList" *ngFor="let user of users">
+    <div class="listElemContainer">
+      <li class="list">
+         <span class="nameList"><b>Name:</b> {{ user.Name | json }}</span> 
+         <span class="nameList"><b>Last Name:</b> {{ user.Surname | json }} </span>
+       </li>
+    </div>
   </ul>
-<hr>
-<p *ngFor="let names of test">
-  {{ names }}
-</p>
+
+

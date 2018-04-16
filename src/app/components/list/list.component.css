@@ -1,0 +1,33 @@
+.title {
+    display: inline-block;
+    text-decoration: underline;
+    margin-left: 2%;
+}
+
+.addBtn {
+    border-radius: 10px;
+    float: right;
+    background-color: greenyellow;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 12px;
+}
+
+.list {
+    list-style: none;
+}
+
+.listElemContainer {
+    padding: 10px 0;
+}
+
+ul:nth-child(odd) {
+    background-color: antiquewhite;
+}
+
+ul:nth-child(even) {
+    background-color: white;
+}
+
+.nameList {
+    display: block;
+}

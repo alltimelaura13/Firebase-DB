@@ -1,0 +1,7 @@
+<h2 class="subTitle">Añadir nuevo usuario</h2>
+
+
+<input class="addInput" type="text" #user id="userInput" placeholder="User Name">
+<input class="addInput" type="text" #userLast id="userLast" placeholder="User Last Name">
+<button class="addBtnSubmit" (click)="add(user.value, userLast.value)"> Añadir usuario </button>
+<button class="goBackBtn" (click)="back()"> Volver atrás </button>

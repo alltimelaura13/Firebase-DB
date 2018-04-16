@@ -4,8 +4,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { FirebaseListObservable } from 'angularfire2/database-deprecated';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
-
-// IMPORTANTE AÑADIR ESTOS IMPORTS, SOBRE TODO EL ULTIMO, O DA PETE
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +16,11 @@ import { Observable } from 'rxjs/Observable';
 export class ListComponent implements OnInit {
   users: any;
 
-  constructor(private af: AngularFireDatabase) {
+// nos suscribimos a los cambios de la DB para recibir en tiempo real los cambios
+  constructor(
+    private af: AngularFireDatabase,
+    private routes: ActivatedRoute,
+    private router: Router) {
    af.list('users').valueChanges().subscribe(
      users => {
        this.users = users;
@@ -28,16 +31,8 @@ export class ListComponent implements OnInit {
   ngOnInit() {
   }
 
-// funcion de añadir algo, en este caso, te crea una DB llamada 'users/'
-// y ahi te va añadiendo lo que le digas, en ese caso, añade 'manolo',
-// pero tendrás que añadir ahi una variable que captures del input,
-// para que añada el campo input y no un valor fijo
-
-  add(user, userLast) {
-    console.log('si');
-    firebase.database().ref('users/').push({
-      Name: user,
-      Surname: userLast
-    });
+  // para navegar a la pagina de añadir usuario
+  goToAdd() {
+    this.router.navigate(['add']);
   }
 }
