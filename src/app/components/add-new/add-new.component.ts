@@ -18,6 +18,7 @@ export class AddNewComponent implements OnInit {
 
   ngOnInit() {
   }
+
   add(user, userLast) {
     console.log('si');
     firebase.database().ref('users/').push({
