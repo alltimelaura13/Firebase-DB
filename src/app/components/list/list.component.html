@@ -5,4 +5,12 @@
 
 <!-- BOton sencillo con una funcion de añadir, que puedes ver en list.component.ts
 tendrás que añadir un input y tal para poder poner nombre -->
-<button (click)="add()"> Añadir algo </button>
+<input type="text" #user id="userInput" placeholder="User Name">
+<input type="text" #userLast id="userLast" placeholder="User Last Name">
+<button (click)="add(user.value, userLast.value)"> Añadir algo </button>
+
+<ul *ngFor="let name of users">
+  <li>
+    {{ name.Name }}
+  </li>
+</ul>

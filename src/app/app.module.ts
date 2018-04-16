@@ -10,10 +10,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { ListComponent } from './components/list/list.component';
 
+import * as firebase from 'firebase/app';
 
 // Esto habría que sacarlo a un .env para que no sea público,
 // pero se mantiene aquí por motivos de facilidad lectora.
 // Tu tambien dejalo aquí pero añade el comentario que he puesto arriba
+
 export const firebaseConfig = {
   apiKey: 'AIzaSyCXmbIqHNnPczedMvF1opqlmAPoCDpQUiw',
   authDomain: 'userlist-3b.firebaseapp.com',
@@ -22,6 +24,8 @@ export const firebaseConfig = {
   storageBucket: 'userlist-3b.appspot.com',
   messagingSenderId: '649269537068'
 };
+
+firebase.initializeApp(firebaseConfig);
 
 
 @NgModule({
