@@ -11,7 +11,8 @@ tendrás que añadir un input y tal para poder poner nombre -->
 
   <ul style ="height: 50px; background-color:antiquewhite">
     <li *ngFor="let user of users">
-      {{ user | json }}
+      {{ user.Name | json }}
+      {{ user.Surname | json }}
     </li>
 
   </ul>

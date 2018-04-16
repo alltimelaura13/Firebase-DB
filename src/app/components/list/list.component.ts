@@ -16,7 +16,6 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ListComponent implements OnInit {
   users: any;
-  test = ['pepe', 'one'];
 
   constructor(private af: AngularFireDatabase) {
    af.list('users').valueChanges().subscribe(
@@ -27,7 +26,6 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.af.list('users/').valueChanges();
   }
 
 // funcion de añadir algo, en este caso, te crea una DB llamada 'users/'
