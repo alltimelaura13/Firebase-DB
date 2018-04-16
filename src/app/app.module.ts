@@ -40,7 +40,7 @@ firebase.initializeApp(firebaseConfig);
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

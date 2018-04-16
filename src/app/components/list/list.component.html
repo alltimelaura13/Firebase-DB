@@ -9,8 +9,13 @@ tendrás que añadir un input y tal para poder poner nombre -->
 <input type="text" #userLast id="userLast" placeholder="User Last Name">
 <button (click)="add(user.value, userLast.value)"> Añadir algo </button>
 
-<ul *ngFor="let name of users">
-  <li>
-    {{ name.Name }}
-  </li>
-</ul>
+  <ul style ="height: 50px; background-color:antiquewhite">
+    <li *ngFor="let user of users">
+      {{ user | json }}
+    </li>
+
+  </ul>
+<hr>
+<p *ngFor="let names of test">
+  {{ names }}
+</p>
